@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>resturent-project</title>
+
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header class="bg-white shadow-sm">
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a href="#" class="flex items-center">
+          <img
+            class="w-[200px]"
+            src="../src/assets/images/logo.png"
+            alt="Restaurant Logo"
+            class="w-12 h-12 object-contains"
+          />
+        </a>
+
+        <!-- Navigation -->
+        <nav class="flex items-center gap-8">
+          <a
+            class="text-gray-700 font-medium hover:text-orange-500 transition"
+            href="/index.html"
+          >
+            Home
+          </a>
+
+          <a
+            class="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-[#F0A500]/10 hover:text-[#F0A500] sm:px-4"
+            href="dashbord.html"
+            >Dashbord</a
+          >
+
+          <!-- Cart -->
+          <a
+            href="#"
+            class="relative flex items-center gap-2 text-gray-700 font-medium hover:text-orange-500 transition"
+          >
+            <!-- Shopping Bag Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.8"
+              stroke="currentColor"
+              class="w-7 h-7 text-orange-500"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 4h2l2.2 11h10.6l2.2-7H6"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 19.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM18 19.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+              />
+            </svg>
+
+            <span>Cart</span>
+
+            <!-- Cart Count / Add Option -->
+            <span
+              class="absolute -top-3 -right-3 w-5 h-5 bg-orange-500 text-white text-xs font-bold rounded-full flex items-center justify-center"
+            >
+              +
+            </span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main class="flex-1">
+      <div class="min-h-screen bg-gray-100 p-6">
+        <div class="mx-auto max-w-2xl">
+          <!-- Form Card -->
+          <div class="overflow-hidden rounded-2xl bg-white shadow-xl">
+            <!-- Header -->
+            <div class="bg-[#F0A500] px-8 py-7">
+              <h1 class="text-2xl font-bold text-white">Add New Product</h1>
+
+              <p class="mt-1 text-sm text-white/80">
+                Add a new product to your restaurant menu
+              </p>
+            </div>
+
+            <!-- Form -->
+            <form class="space-y-6 p-8">
+              <!-- Product Name -->
+              <div>
+                <label
+                  for="productName"
+                  class="mb-2 block text-sm font-semibold text-gray-700"
+                >
+                  Product Name
+                </label>
+
+                <input
+                  type="text"
+                  id="productName"
+                  placeholder="e.g. Chicken Burger"
+                  class="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-700 outline-none transition focus:border-[#F0A500] focus:ring-2 focus:ring-[#F0A500]/20"
+                />
+              </div>
+
+              <!-- Product Image -->
+              <div>
+                <label
+                  for="productImage"
+                  class="mb-2 block text-sm font-semibold text-gray-700"
+                >
+                  Product Image
+                </label>
+
+                <select
+                  id="productImage"
+                  class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-700 outline-none transition focus:border-[#F0A500] focus:ring-2 focus:ring-[#F0A500]/20"
+                >
+                  <option value="">Select Product Image</option>
+                  <option value="burger">Burger</option>
+                  <option value="pizza">Pizza</option>
+                  <option value="chicken">Chicken</option>
+                  <option value="pasta">Pasta</option>
+                  <option value="sandwich">Sandwich</option>
+                </select>
+              </div>
+
+              <!-- Price & Rating -->
+              <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <!-- Price -->
+                <div>
+                  <label
+                    for="price"
+                    class="mb-2 block text-sm font-semibold text-gray-700"
+                  >
+                    Price
+                  </label>
+
+                  <div class="relative">
+                    <span
+                      class="absolute left-4 top-1/2 -translate-y-1/2 font-semibold text-gray-500"
+                    >
+                      ৳
+                    </span>
+
+                    <input
+                      type="number"
+                      id="price"
+                      min="0"
+                      placeholder="250"
+                      class="w-full rounded-xl border border-gray-300 py-3 pl-10 pr-4 text-gray-700 outline-none transition focus:border-[#F0A500] focus:ring-2 focus:ring-[#F0A500]/20"
+                    />
+                  </div>
+                </div>
+
+                <!-- Rating -->
+                <div>
+                  <label
+                    for="rating"
+                    class="mb-2 block text-sm font-semibold text-gray-700"
+                  >
+                    Rating
+                  </label>
+
+                  <select
+                    id="rating"
+                    class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-700 outline-none transition focus:border-[#F0A500] focus:ring-2 focus:ring-[#F0A500]/20"
+                  >
+                    <option value="">Select Rating</option>
+                    <option value="5">★★★★★ 5.0</option>
+                    <option value="4">★★★★☆ 4.0</option>
+                    <option value="3">★★★☆☆ 3.0</option>
+                    <option value="2">★★☆☆☆ 2.0</option>
+                    <option value="1">★☆☆☆☆ 1.0</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <div class="border-t border-gray-100"></div>
+
+              <!-- Buttons -->
+              <div
+                class="flex flex-col-reverse gap-3 sm:flex-row sm:justify-end"
+              >
+                <button
+                  type="reset"
+                  class="rounded-xl border border-gray-300 px-6 py-3 font-semibold text-gray-600 transition hover:bg-gray-100"
+                >
+                  Cancel
+                </button>
+
+                <button
+                  type="submit"
+                  class="rounded-xl bg-[#F0A500] px-7 py-3 font-semibold text-white shadow-md transition hover:bg-[#d99100] hover:shadow-lg active:scale-95"
+                >
+                  + Add Product
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#111827] text-white">
+      <!-- Main Footer -->
+      <div class="mx-auto max-w-7xl px-6 py-14 md:px-10">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Restaurant Info -->
+          <div>
+            <h2 class="text-2xl font-bold">
+              Food<span class="text-[#f5a400]">House</span>
+            </h2>
+
+            <p class="mt-4 max-w-xs text-sm leading-7 text-gray-400">
+              Delicious food made with fresh ingredients. Enjoy your favorite
+              meals with great taste and quality service.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="mt-6 flex gap-3">
+              <a
+                href="#"
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition hover:bg-[#f5a400] hover:text-white"
+              >
+                f
+              </a>
+
+              <a
+                href="#"
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition hover:bg-[#f5a400] hover:text-white"
+              >
+                in
+              </a>
+
+              <a
+                href="#"
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition hover:bg-[#f5a400] hover:text-white"
+              >
+                X
+              </a>
+
+              <a
+                href="#"
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition hover:bg-[#f5a400] hover:text-white"
+              >
+                ▶
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-semibold">Quick Links</h3>
+
+            <div class="mt-5 space-y-3">
+              <a
+                href="#"
+                class="block text-sm text-gray-400 transition hover:text-[#f5a400]"
+              >
+                Home
+              </a>
+
+              <a
+                href="#"
+                class="block text-sm text-gray-400 transition hover:text-[#f5a400]"
+              >
+                About Us
+              </a>
+
+              <a
+                href="#"
+                class="block text-sm text-gray-400 transition hover:text-[#f5a400]"
+              >
+                Our Menu
+              </a>
+
+              <a
+                href="#"
+                class="block text-sm text-gray-400 transition hover:text-[#f5a400]"
+              >
+                Popular Foods
+              </a>
+
+              <a
+                href="#"
+                class="block text-sm text-gray-400 transition hover:text-[#f5a400]"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+
+          <!-- Opening Hours -->
+          <div>
+            <h3 class="text-lg font-semibold">Opening Hours</h3>
+
+            <div class="mt-5 space-y-4 text-sm">
+              <div class="flex justify-between gap-5">
+                <span class="text-gray-400"> Monday - Friday </span>
+
+                <span class="text-[#f5a400]"> 10:00 AM - 10:00 PM </span>
+              </div>
+
+              <div class="flex justify-between gap-5">
+                <span class="text-gray-400"> Saturday </span>
+
+                <span class="text-[#f5a400]"> 10:00 AM - 11:00 PM </span>
+              </div>
+
+              <div class="flex justify-between gap-5">
+                <span class="text-gray-400"> Sunday </span>
+
+                <span class="text-[#f5a400]"> 12:00 PM - 10:00 PM </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3 class="text-lg font-semibold">Contact Us</h3>
+
+            <div class="mt-5 space-y-4">
+              <p class="flex items-start gap-3 text-sm text-gray-400">
+                <span class="mt-0.5 text-[#f5a400]">📍</span>
+                <span>
+                  123 Food Street,<br />
+                  Dhaka, Bangladesh
+                </span>
+              </p>
+
+              <p class="flex items-center gap-3 text-sm text-gray-400">
+                <span class="text-[#f5a400]">☎</span>
+                +880 1234-567890
+              </p>
+
+              <p class="flex items-center gap-3 text-sm text-gray-400">
+                <span class="text-[#f5a400]">✉</span>
+                info@foodhouse.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="border-t border-white/10">
+        <div
+          class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-center sm:flex-row md:px-10"
+        >
+          <p class="text-sm text-gray-500">
+            © 2026 FoodHouse. All rights reserved.
+          </p>
+
+          <div class="flex gap-5 text-sm">
+            <a href="#" class="text-gray-500 transition hover:text-[#f5a400]">
+              Privacy Policy
+            </a>
+
+            <a href="#" class="text-gray-500 transition hover:text-[#f5a400]">
+              Terms & Conditions
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

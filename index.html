@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>resturent-project</title>
+
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="bg-white shadow-sm">
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a href="#" class="flex items-center">
+          <img
+            class="w-[200px]"
+            src="src/assets/images/logo.png"
+            alt="Restaurant Logo"
+            class="w-12 h-12 object-contains"
+          />
+        </a>
+
+        <!-- Navigation -->
+        <nav class="flex items-center gap-8">
+          <a
+            href="#"
+            class="text-gray-700 font-medium hover:text-orange-500 transition"
+          >
+            Home
+          </a>
+
+          <a
+            class="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-[#F0A500]/10 hover:text-[#F0A500] sm:px-4"
+            href="dashbord/dashbord.html"
+            >Dashbord</a
+          >
+
+          <!-- Cart -->
+          <a
+            href="#"
+            class="relative flex items-center gap-2 text-gray-700 font-medium hover:text-orange-500 transition"
+          >
+            <!-- Shopping Bag Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.8"
+              stroke="currentColor"
+              class="w-7 h-7 text-orange-500"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 4h2l2.2 11h10.6l2.2-7H6"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 19.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM18 19.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+              />
+            </svg>
+
+            <span>Cart</span>
+
+            <!-- Cart Count / Add Option -->
+            <span
+              class="absolute -top-3 -right-3 w-5 h-5 bg-orange-500 text-white text-xs font-bold rounded-full flex items-center justify-center"
+            >
+              +
+            </span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Banner -->
+    <section
+      class="relative min-h-[600px] flex items-center overflow-hidden bg-cover bg-center"
+      style="
+        background-image: url(&quot;/src/assets/images/banner-bg.png&quot;);
+      "
+    >
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black/60"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <!-- Small Text -->
+          <p
+            class="mb-4 text-sm md:text-base font-semibold uppercase tracking-[4px] text-orange-400"
+          >
+            Fresh • Delicious • Fast
+          </p>
+
+          <!-- Heading -->
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white"
+          >
+            Delicious Food,
+            <span class="block text-orange-500"> Made With Love. </span>
+          </h1>
+
+          <!-- Description -->
+          <p class="mt-6 max-w-xl text-base md:text-lg leading-8 text-gray-200">
+            Enjoy delicious burgers, cheesy pizzas, crispy fries and fresh meals
+            made specially for you.
+          </p>
+
+          <!-- Buttons -->
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href="#menu"
+              class="rounded-full bg-orange-500 px-7 py-3.5 font-semibold text-white shadow-lg shadow-orange-500/30 transition hover:bg-orange-600 hover:-translate-y-1"
+            >
+              Explore Menu
+            </a>
+
+            <a
+              href="#order"
+              class="rounded-full border border-white/40 bg-white/10 px-7 py-3.5 font-semibold text-white backdrop-blur-sm transition hover:bg-white hover:text-gray-900"
+            >
+              Order Now
+            </a>
+          </div>
+
+          <!-- Features -->
+          <div
+            class="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-sm text-gray-200"
+          >
+            <div class="flex items-center gap-2">
+              <span class="text-orange-400">✓</span>
+              Fresh Ingredients
+            </div>
+
+            <div class="flex items-center gap-2">
+              <span class="text-orange-400">✓</span>
+              Fast Delivery
+            </div>
+
+            <div class="flex items-center gap-2">
+              <span class="text-orange-400">✓</span>
+              Quality Food
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Fade -->
+      <div
+        class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-950/70 to-transparent"
+      ></div>
+    </section>
+    <section
+      class="border-t-4 border-[#b5121b] bg-[#f8f8f8] px-5 py-14 md:px-8"
+    >
+      <!-- Heading -->
+      <div class="mx-auto max-w-6xl text-center">
+        <p
+          class="text-xs font-semibold uppercase tracking-[0.28em] text-[#f5a400]"
+        >
+          Our Menu
+        </p>
+
+        <h2
+          class="mt-3 text-3xl font-bold tracking-tight text-[#111827] md:text-4xl"
+        >
+          Choose Your Favorite Food
+        </h2>
+
+        <p
+          class="mx-auto mt-4 max-w-2xl text-sm leading-6 text-gray-500 md:text-base"
+        >
+          Freshly prepared food made with quality ingredients. Pick your
+          favorite item and add it to your cart.
+        </p>
+
+        <!-- Menu Bar -->
+        <div class="mt-8 flex flex-wrap justify-center gap-2.5">
+          <button
+            class="rounded-full bg-[#b5121b] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#991018]"
+          >
+            All
+          </button>
+
+          <button
+            class="rounded-full border border-gray-200 bg-white px-5 py-2 text-sm font-medium text-gray-600 transition hover:border-[#f5a400] hover:text-[#f5a400]"
+          >
+            Burger
+          </button>
+
+          <button
+            class="rounded-full border border-gray-200 bg-white px-5 py-2 text-sm font-medium text-gray-600 transition hover:border-[#f5a400] hover:text-[#f5a400]"
+          >
+            Pizza
+          </button>
+
+          <button
+            class="rounded-full border border-gray-200 bg-white px-5 py-2 text-sm font-medium text-gray-600 transition hover:border-[#f5a400] hover:text-[#f5a400]"
+          >
+            Chicken
+          </button>
+
+          <button
+            class="rounded-full border border-gray-200 bg-white px-5 py-2 text-sm font-medium text-gray-600 transition hover:border-[#f5a400] hover:text-[#f5a400]"
+          >
+            Sandwich
+          </button>
+
+          <button
+            class="rounded-full border border-gray-200 bg-white px-5 py-2 text-sm font-medium text-gray-600 transition hover:border-[#f5a400] hover:text-[#f5a400]"
+          >
+            Pasta
+          </button>
+        </div>
+      </div>
+
+      <!-- Food Cards -->
+      <div
+        class="mx-auto mt-10 grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      >
+        <!-- Chicken Burger -->
+        <div
+          class="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="h-52 overflow-hidden">
+            <img
+              src="src/assets/images/Chicken_Burger.png"
+              alt="Chicken Burger"
+              class="h-full w-full object-cover transition duration-500 hover:scale-105"
+            />
+          </div>
+
+          <div class="flex flex-1 flex-col p-5">
+            <h3 class="text-lg font-semibold text-[#111827]">Chicken Burger</h3>
+
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-base tracking-wide">
+                <span class="text-[#f5a400]">★★★★</span
+                ><span class="text-gray-300">★</span>
+              </div>
+
+              <p class="text-lg font-bold text-[#111827]">$12.00</p>
+            </div>
+
+            <button
+              class="mt-5 w-full rounded-lg bg-[#f5a400] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#e39400] active:scale-[0.98]"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Chicken Cheese Pizza -->
+        <div
+          class="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="h-52 overflow-hidden">
+            <img
+              src="src/assets/images/Chicken_Cheese_Pizza.jpg"
+              alt="Chicken Cheese Pizza"
+              class="h-full w-full object-cover transition duration-500 hover:scale-105"
+            />
+          </div>
+
+          <div class="flex flex-1 flex-col p-5">
+            <h3 class="text-lg font-semibold text-[#111827]">
+              Chicken Cheese Pizza
+            </h3>
+
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-base tracking-wide text-[#f5a400]">★★★★★</div>
+
+              <p class="text-lg font-bold text-[#111827]">$15.00</p>
+            </div>
+
+            <button
+              class="mt-5 w-full rounded-lg bg-[#f5a400] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#e39400] active:scale-[0.98]"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Chicken Fry -->
+        <div
+          class="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="h-52 overflow-hidden">
+            <img
+              src="src/assets/images/Chicken_Fry.jpg"
+              alt="Chicken Fry"
+              class="h-full w-full object-cover transition duration-500 hover:scale-105"
+            />
+          </div>
+
+          <div class="flex flex-1 flex-col p-5">
+            <h3 class="text-lg font-semibold text-[#111827]">Chicken Fry</h3>
+
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-base tracking-wide">
+                <span class="text-[#f5a400]">★★</span
+                ><span class="text-gray-300">★★★</span>
+              </div>
+
+              <p class="text-lg font-bold text-[#111827]">$32.00</p>
+            </div>
+
+            <button
+              class="mt-5 w-full rounded-lg bg-[#f5a400] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#e39400] active:scale-[0.98]"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Chicken Sandwich -->
+        <div
+          class="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="h-52 overflow-hidden">
+            <img
+              src="src/assets/images/Chicken_Sandwich.jpg"
+              alt="Chicken Sandwich"
+              class="h-full w-full object-cover transition duration-500 hover:scale-105"
+            />
+          </div>
+
+          <div class="flex flex-1 flex-col p-5">
+            <h3 class="text-lg font-semibold text-[#111827]">
+              Chicken Sandwich
+            </h3>
+
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-base tracking-wide text-[#f5a400]">★★★★★</div>
+
+              <p class="text-lg font-bold text-[#111827]">$7.00</p>
+            </div>
+
+            <button
+              class="mt-5 w-full rounded-lg bg-[#f5a400] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#e39400] active:scale-[0.98]"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Fry Nurger -->
+        <div
+          class="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="h-52 overflow-hidden">
+            <img
+              src="src/assets/images/Fry_Nurger.jpg"
+              alt="Fry Nurger"
+              class="h-full w-full object-cover transition duration-500 hover:scale-105"
+            />
+          </div>
+
+          <div class="flex flex-1 flex-col p-5">
+            <h3 class="text-lg font-semibold text-[#111827]">Fry Nurger</h3>
+
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-base tracking-wide text-[#f5a400]">★★★★★</div>
+
+              <p class="text-lg font-bold text-[#111827]">$10.00</p>
+            </div>
+
+            <button
+              class="mt-5 w-full rounded-lg bg-[#f5a400] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#e39400] active:scale-[0.98]"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Grill Chicken -->
+        <div
+          class="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="h-52 overflow-hidden">
+            <img
+              src="src/assets/images/Grill_Chicken.jpg"
+              alt="Grill Chicken"
+              class="h-full w-full object-cover transition duration-500 hover:scale-105"
+            />
+          </div>
+
+          <div class="flex flex-1 flex-col p-5">
+            <h3 class="text-lg font-semibold text-[#111827]">Grill Chicken</h3>
+
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-base tracking-wide text-[#f5a400]">★★★★★</div>
+
+              <p class="text-lg font-bold text-[#111827]">$3.00</p>
+            </div>
+
+            <button
+              class="mt-5 w-full rounded-lg bg-[#f5a400] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#e39400] active:scale-[0.98]"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Pasta -->
+        <div
+          class="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="h-52 overflow-hidden">
+            <img
+              src="src/assets/images/Spaghetti.jpg"
+              alt="Pasta"
+              class="h-full w-full object-cover transition duration-500 hover:scale-105"
+            />
+          </div>
+
+          <div class="flex flex-1 flex-col p-5">
+            <h3 class="text-lg font-semibold text-[#111827]">Pasta</h3>
+
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-base tracking-wide">
+                <span class="text-[#f5a400]">★★</span
+                ><span class="text-gray-300">★★★</span>
+              </div>
+
+              <p class="text-lg font-bold text-[#111827]">$44.00</p>
+            </div>
+
+            <button
+              class="mt-5 w-full rounded-lg bg-[#f5a400] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#e39400] active:scale-[0.98]"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Seekh Kebab -->
+        <div
+          class="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="h-52 overflow-hidden">
+            <img
+              src="src/assets/images/Seekh_Kebab.jpg"
+              alt="Seekh Kebab"
+              class="h-full w-full object-cover transition duration-500 hover:scale-105"
+            />
+          </div>
+
+          <div class="flex flex-1 flex-col p-5">
+            <h3 class="text-lg font-semibold text-[#111827]">Seekh Kebab</h3>
+
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-base tracking-wide text-[#f5a400]">★★★★★</div>
+
+              <p class="text-lg font-bold text-[#111827]">$43.00</p>
+            </div>
+
+            <button
+              class="mt-5 w-full rounded-lg bg-[#f5a400] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#e39400] active:scale-[0.98]"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-[#111827] text-white">
+      <!-- Main Footer -->
+      <div class="mx-auto max-w-7xl px-6 py-14 md:px-10">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Restaurant Info -->
+          <div>
+            <h2 class="text-2xl font-bold">
+              Food<span class="text-[#f5a400]">House</span>
+            </h2>
+
+            <p class="mt-4 max-w-xs text-sm leading-7 text-gray-400">
+              Delicious food made with fresh ingredients. Enjoy your favorite
+              meals with great taste and quality service.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="mt-6 flex gap-3">
+              <a
+                href="#"
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition hover:bg-[#f5a400] hover:text-white"
+              >
+                f
+              </a>
+
+              <a
+                href="#"
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition hover:bg-[#f5a400] hover:text-white"
+              >
+                in
+              </a>
+
+              <a
+                href="#"
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition hover:bg-[#f5a400] hover:text-white"
+              >
+                X
+              </a>
+
+              <a
+                href="#"
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm font-semibold transition hover:bg-[#f5a400] hover:text-white"
+              >
+                ▶
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-semibold">Quick Links</h3>
+
+            <div class="mt-5 space-y-3">
+              <a
+                href="#"
+                class="block text-sm text-gray-400 transition hover:text-[#f5a400]"
+              >
+                Home
+              </a>
+
+              <a
+                href="#"
+                class="block text-sm text-gray-400 transition hover:text-[#f5a400]"
+              >
+                About Us
+              </a>
+
+              <a
+                href="#"
+                class="block text-sm text-gray-400 transition hover:text-[#f5a400]"
+              >
+                Our Menu
+              </a>
+
+              <a
+                href="#"
+                class="block text-sm text-gray-400 transition hover:text-[#f5a400]"
+              >
+                Popular Foods
+              </a>
+
+              <a
+                href="#"
+                class="block text-sm text-gray-400 transition hover:text-[#f5a400]"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+
+          <!-- Opening Hours -->
+          <div>
+            <h3 class="text-lg font-semibold">Opening Hours</h3>
+
+            <div class="mt-5 space-y-4 text-sm">
+              <div class="flex justify-between gap-5">
+                <span class="text-gray-400"> Monday - Friday </span>
+
+                <span class="text-[#f5a400]"> 10:00 AM - 10:00 PM </span>
+              </div>
+
+              <div class="flex justify-between gap-5">
+                <span class="text-gray-400"> Saturday </span>
+
+                <span class="text-[#f5a400]"> 10:00 AM - 11:00 PM </span>
+              </div>
+
+              <div class="flex justify-between gap-5">
+                <span class="text-gray-400"> Sunday </span>
+
+                <span class="text-[#f5a400]"> 12:00 PM - 10:00 PM </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3 class="text-lg font-semibold">Contact Us</h3>
+
+            <div class="mt-5 space-y-4">
+              <p class="flex items-start gap-3 text-sm text-gray-400">
+                <span class="mt-0.5 text-[#f5a400]">📍</span>
+                <span>
+                  123 Food Street,<br />
+                  Dhaka, Bangladesh
+                </span>
+              </p>
+
+              <p class="flex items-center gap-3 text-sm text-gray-400">
+                <span class="text-[#f5a400]">☎</span>
+                +880 1234-567890
+              </p>
+
+              <p class="flex items-center gap-3 text-sm text-gray-400">
+                <span class="text-[#f5a400]">✉</span>
+                info@foodhouse.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="border-t border-white/10">
+        <div
+          class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-center sm:flex-row md:px-10"
+        >
+          <p class="text-sm text-gray-500">
+            © 2026 FoodHouse. All rights reserved.
+          </p>
+
+          <div class="flex gap-5 text-sm">
+            <a href="#" class="text-gray-500 transition hover:text-[#f5a400]">
+              Privacy Policy
+            </a>
+
+            <a href="#" class="text-gray-500 transition hover:text-[#f5a400]">
+              Terms & Conditions
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
