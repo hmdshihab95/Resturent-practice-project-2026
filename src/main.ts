@@ -57,4 +57,3 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="spacer"></section>
 `
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
